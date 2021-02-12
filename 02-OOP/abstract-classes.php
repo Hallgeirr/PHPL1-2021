@@ -13,11 +13,10 @@ abstract class Person
         $this->gender = $gender;
     }
 
-    abstract function introduce()
-    {
-    }
+    abstract function introduce();
 
-    function greet($name)
+
+    function greet($name): string
     {
         return "Hello $name";
     }
