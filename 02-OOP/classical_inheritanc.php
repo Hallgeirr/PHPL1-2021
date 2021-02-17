@@ -38,13 +38,11 @@ class Salesman extends Person
     {
         $occupation = self::occupation;
         parent::__construct($name, $age, $occupation);
-        $this->name = $name;
-        $this->age = $age;
     }
 
     public function introduce(): string
     {
-        return "Hello, my name is $this->name, don't forget to check out my products!";
+        return parent::introduce() . ", don't forget to check out my products!";
     }
 }
 
@@ -56,14 +54,11 @@ class ComputerProgrammer extends Person
     {
         $occupation = self::occupation;
         parent::__construct($name, $age, $occupation);
-        $this->name = $name;
-        $this->age = $age;
     }
 
     public function describe_job(): string
     {
-        $occupation = self::occupation;
-        return "I am currently working as a(n) $occupation, don't forget to check out my Codewars account ;)";
+        return parent::describe_job() . ", don't forget to check out my Codewars account ;)";
     }
 }
 
@@ -75,14 +70,11 @@ class WebDeveloper extends ComputerProgrammer
     {
         $occupation = self::occupation;
         parent::__construct($name, $age, $occupation);
-        $this->name = $name;
-        $this->age = $age;
     }
 
     public function describe_job(): string
     {
-        $occupation = self::occupation;
-        return "I am currently working as a(n) $occupation, don't forget to check out my Codewars account ;) And don't forget to check on my website :D";
+        return parent::describe_job() . " And don't forget to check on my website :D";
     }
 
     public function describe_website(): string
