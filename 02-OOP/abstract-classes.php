@@ -39,7 +39,7 @@ class Child extends Person
 
     function greet($name): string
     {
-        return "Hi $name, let's play!";
+        return parent::greet() . ", let's play!";
     }
 
     function say_dreams(): string
@@ -60,7 +60,7 @@ class ComputerProgrammer extends Person
 
     function greet($name): string
     {
-        return "Hello $name, I'm $this->name, nice to meet you";
+        return parent::greet() . ", I'm $this->name, nice to meet you";
     }
 
     function advertise(): string
