@@ -34,6 +34,6 @@ class ComputerProgrammer extends Person
 {
     public function introduce(): string
     {
-        return "Hello, my name is $this->name and I am a $this->occupation";
+        return parent::introduce() . " and I am a $this->occupation";
     }
 }
